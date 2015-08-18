@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="us.baocai.baocaishop.OrderActivity" >
+
+    <item
+        android:id="@+id/action_printer"
+        android:orderInCategory="100"
+        android:title="手动打印机连接"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_reboot_push"
+        android:orderInCategory="100"
+        android:title="推送重启"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/action_default"
+        android:orderInCategory="100"
+        android:title="恢复出厂设置"
+        app:showAsAction="never">
+    </item>
+
+</menu>

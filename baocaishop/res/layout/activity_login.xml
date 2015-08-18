@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:src="@drawable/logoicon" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <Button
+        android:id="@+id/gotoorderhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="进入订单页面" />
+
+    <TextView
+        android:id="@+id/printer_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="当前打印机状态:" />
+
+    <TextView
+        android:id="@+id/cid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="cid:" />
+
+    <EditText
+        android:id="@+id/activationCode"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/gotoorderhome"
+        android:layout_alignRight="@+id/gotoorderhome"
+        android:layout_below="@+id/gotoorderhome"
+        android:layout_marginTop="18dp" />
+
+    <Button
+        android:id="@+id/activation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/activationCode"
+        android:layout_alignRight="@+id/activationCode"
+        android:layout_below="@+id/activationCode"
+        android:layout_marginTop="18dp"
+        android:text="激活" />
+
+</RelativeLayout>

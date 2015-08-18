@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="us.baocai.baocaishop"
+    android:versionCode="46"
+    android:versionName="1.6.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- <uses-permission android:name="getui.permission.GetuiService.第三方包名" /> -->
+    <uses-permission android:name="getui.permission.GetuiService.us.baocai.baocaishop" />
+
+    <permission
+        android:name="getui.permission.GetuiService.us.baocai.baocaishop"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <!-- 佳博打印机权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.hardware.usb.accessory" />
+
+    <permission android:name="android.permission.DEVICE_POWER" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- <uses-permission android:name="getui.permission.GetuiService.第三方包名" /> -->
+    <uses-permission android:name="getui.permission.GetuiService.us.baocai.baocaishop" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoicon"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="554212f767e58e03fd003fff" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="00000000" />
+
+        <activity
+            android:name=".OrderActivity"
+            android:icon="@drawable/logoicon"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        
+        <activity
+            android:name=".FinishOrderActivity"
+            android:icon="@drawable/logoicon"
+            android:launchMode="singleTop"
+            android:parentActivityName="us.baocai.baocaishop.OrderActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        
+        <activity
+            android:name=".LoginActivity"
+            android:icon="@drawable/logoicon"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+     <!--    <meta-data
+            android:name="PUSH_APPID"
+            android:value="f4EGuNnqeeAoBoziJYYVk7" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="9mDSn6LBsD6S6gEdxQcOo9" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="x29q4nraG09czqCrSo3bx6" />
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" /> -->
+
+        <!-- 配置第三方Receiver -->
+        <!--
+             <receiver
+            android:name="us.baocai.baocaishop.receiver.OrderReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.f4EGuNnqeeAoBoziJYYVk7" />
+            </intent-filter>
+        </receiver>        -->
+
+
+        <!-- 配置SDK核心服务 -->
+      <!--   <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service> -->
+
+      <!--   <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+            </intent-filter>
+        </receiver> -->
+        <!--  -->
+     <!--    <receiver
+            android:name="com.igexin.sdk.PushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.us.baocai.baocaishop"
+            android:process=":pushservice" /> -->
+        <!-- android:authorities="downloads.第三方包名" -->
+
+      <!--   <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                android:name="com.igexin.sdk.action.第三方的appId"
+                <action android:name="com.igexin.sdk.action.f4EGuNnqeeAoBoziJYYVk7" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" /> -->
+
+        <!-- 佳博打印机服务 -->
+        <service
+            android:name="com.gprinter.service.GpPrintService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="GpPrintService"
+            android:priority="1000"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.gprinter.aidl.GpPrintService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".gprinter.PrinterConnectDialog"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:parentActivityName=".LoginActivity" >
+        </activity>
+        <activity
+            android:name=".gprinter.AutoConnectPrinterConnectDialog"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:parentActivityName=".LoginActivity" >
+        </activity>
+
+        <!-- 端口设置对话 -->
+        <activity
+            android:name=".gprinter.PortConfigurationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/port_configuration"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- 蓝牙设备 -->
+        <activity
+            android:name=".gprinter.BluetoothDeviceList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/bluetooth_device_list"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- USB设备 -->
+        <activity
+            android:name=".gprinter.UsbDeviceList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/usb_devices_list"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <!-- 友盟社会化更新 -->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".BaocaiPrinterActivity"
+            android:label="@string/title_activity_baocai_printer"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+
+        <!--
+        <receiver android:name=".receiver.BluetoothConnectActivityReceiver" >
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
+            </intent-filter>
+        </receiver>
+        -->
+        <activity
+            android:name=".BaocaiPrinterConnectionActivity"
+            android:icon="@drawable/logoicon"
+            android:label="@string/title_activity_baocai_blue_connection"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+
+        <service
+            android:name="us.baocai.baocaishop.push.BaocaiPushService"
+            android:persistent="true" 
+            android:priority="1000" >
+        </service>
+        
+         <activity
+        android:name="com.umeng.fb.ConversationActivity"/>
+    </application>
+
+</manifest>

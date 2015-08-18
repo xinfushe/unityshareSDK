@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/order_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/order_head_finish"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="完成"
+            android:textSize="20sp"
+            android:textColor="@color/black" >
+        </TextView>
+    </LinearLayout>
+    
+    <us.baocai.baocaishop.widget.OrderListView
+        android:id="@+id/finish_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/order_title_bar" >
+
+    </us.baocai.baocaishop.widget.OrderListView>
+
+</RelativeLayout>

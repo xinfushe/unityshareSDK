@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="us.baocai.baocaishop.OrderActivity" >
+
+    <item
+        android:id="@+id/action_test_printer"
+        android:title="测试打印机"
+        app:showAsAction="never"/>
+      <item
+        android:id="@+id/action_total_cash"
+        android:title="汇总当日现金收入"
+        app:showAsAction="never"/>
+     <item
+        android:id="@+id/action_turn_finish"
+        android:title="订单完成"
+        app:showAsAction="never"/>
+     
+    <item
+        android:id="@+id/action_refresh_order"
+        android:orderInCategory="100"
+        android:title="刷新订单"
+        app:showAsAction="always">
+    </item>
+ <item android:id="@+id/action_open_shop" android:title=""
+        app:actionViewClass="android.widget.ToggleButton"
+        android:orderInCategory="100" app:showAsAction="always" />
+
+</menu>
